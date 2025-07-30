@@ -1,13 +1,17 @@
-import { HelmetProvider } from 'react-helmet-async';
-import { AuthProvider } from '~/components/auth/AuthProvider';
-import Router from '~/components/router/Router';
+import { HomePage } from './pages/HomePage';
+import { Header } from './shared/Header';
+import { Footer } from './shared/Footer';
 
-export default function App() {
+const App: React.FC = () => {
   return (
-    <HelmetProvider>
-      <AuthProvider>
-        <Router />
-      </AuthProvider>
-    </HelmetProvider>
+    <div className="bg-slate-50 font-sans">
+      <Header />
+      <main>
+        <HomePage />
+      </main>
+      <Footer />
+    </div>
   );
-}
+};
+
+export default App;

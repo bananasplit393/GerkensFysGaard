@@ -1,18 +1,15 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Outlet, RouteObject, useRoutes } from 'react-router-dom';
-import { RequireAuth } from '~/components/auth/AuthProvider';
-import NavBar from '~/components/shared/Nav/NavBar';
-import Loading from '~/components/shared/Loading';
+// import { RequireAuth } from '~/components/auth/AuthProvider';
 
-const HomeScreen = lazy(() => import('~/components/screens/Home'));
-const ProtectedScreen = lazy(() => import('~/components/screens/Protected'));
-const LoginScreen = lazy(() => import('~/components/screens/Login'));
-const NotFoundScreen = lazy(() => import('~/components/screens/NotFound'));
+import Loading from '~/components/shared/Loading';
+import { HomePage } from '../pages/HomePage';
+const LoginScreen = lazy(() => import('~/components/pages/Login'));
+const NotFoundScreen = lazy(() => import('~/components/pages/NotFound'));
 
 function Layout() {
   return (
     <>
-      <NavBar />
       <Outlet />
     </>
   );
@@ -26,16 +23,16 @@ function Routes() {
       children: [
         {
           index: true,
-          element: <HomeScreen />,
+          element: <HomePage />,
         },
-        {
-          path: '/protected',
-          element: (
-            <RequireAuth>
-              <ProtectedScreen />
-            </RequireAuth>
-          ),
-        },
+        // {
+        //   path: '/protected',
+        //   element: (
+        //     <RequireAuth>
+        //       <ProtectedScreen />
+        //     </RequireAuth>
+        //   ),
+        // },
         {
           path: '/login',
           element: <LoginScreen />,
