@@ -1,58 +1,31 @@
-// src/components/icons.tsx
-
 import React from 'react';
+import { FontAwesomeIcon, type FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
+import { type IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-// Define the props for all icons to share
-export type IconProps = React.SVGProps<SVGSVGElement>;
-
-// Map icon names to their respective components
-export const ICONS = {
-  menu: (props: IconProps) => (
-    <svg
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  ),
-  x: (props: IconProps) => (
-    <svg
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  ),
-  calendar: (props: IconProps) => (
-    <svg
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-      <line x1="16" x2="16" y1="2" y2="6" />
-      <line x1="8" x2="8" y1="2" y2="6" />
-      <line x1="3" x2="21" y1="10" y2="10" />
-    </svg>
-  ),
+// 1. Map desired icon names to their imported FontAwesome icon definitions.
+//    Using faCalendarDays as it's a closer visual match to your original SVG.
+const ICON_MAP: Record<string, IconDefinition> = {
+  menu: faBars,
+  x: faXmark,
+  calendar: faCalendarDays,
 };
 
-// Define a type for the icon names for type safety
-export type IconName = keyof typeof ICONS;
+// 2. Define a type for the icon names for robust type-safety.
+export type IconName = keyof typeof ICON_MAP;
+
+// 3. Define the props for our new generic Icon component.
+//    This inherits all props from FontAwesomeIconProps (like 'size', 'className', 'color')
+//    but makes our custom 'name' prop required.
+export type IconProps = Omit<FontAwesomeIconProps, 'icon'> & {
+  name: IconName;
+};
+
+// 4. Create a single, reusable Icon component.
+export const Icon = ({ name, ...props }: IconProps) => {
+  // Look up the icon definition from the map using the provided name.
+  const iconDefinition = ICON_MAP[name];
+
+  // Render the FontAwesomeIcon with the correct icon and pass down any other props.
+  return <FontAwesomeIcon icon={iconDefinition} {...props} />;
+};
