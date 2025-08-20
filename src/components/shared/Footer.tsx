@@ -1,84 +1,87 @@
+
 import React from 'react';
+import { Button } from '../Interacting/Button';
+
 
 export const Footer: React.FC = () => (
-	<footer className="bg-gray-800 text-gray-300 py-12">
-		<div className="container mx-auto px-4">
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
-				{/* Column 1: Brand */}
-				<div>
-					<h3 className="text-xl font-bold text-white mb-4">
-						Balance & Motion
-					</h3>
-					<p className="text-sm">Your partners in health and recovery.</p>
-				</div>
+    <footer className="bg-gray-800 text-gray-300 py-12">
+        <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+                {/* Column 1: Brand */}
+                <div>
+                    <h3 className="text-xl font-bold text-white mb-4">
+                        Holistisk Sundhedshus
+                    </h3>
+                    <p className="text-sm">Dine partnere inden for sundhed og vejen til et bedre liv.</p>
+                </div>
 
-				{/* Column 2: Navigate */}
-				<div>
-					<h4 className="font-semibold text-lg text-white mb-4">Navigate</h4>
-					<ul className="space-y-2">
-						<li>
-							<a
-								href="#"
-								className="hover:text-white transition-colors duration-300"
-							>
-								Home
-							</a>
-						</li>
-						<li>
-							<a
-								href="#"
-								className="hover:text-white transition-colors duration-300"
-							>
-								Services
-							</a>
-						</li>
-						<li>
-							<a
-								href="#"
-								className="hover:text-white transition-colors duration-300"
-							>
-								About Us
-							</a>
-						</li>
-						<li>
-							<a
-								href="#"
-								className="hover:text-white transition-colors duration-300"
-							>
-								Book Online
-							</a>
-						</li>
-					</ul>
-				</div>
+                {/* Column 2: Navigation */}
+                <div>
+                    <h4 className="font-semibold text-lg text-white mb-4">Navigation</h4>
+                    <ul className="space-y-2">
+                        <li>
+                            <Button
+                                className="w-full bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                                href="#"
+                            >
+                                Forside
+                            </Button>
+                        </li>
+                        <li>
+                            <Button
+                                className="w-full text-gray-300 bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                                href="#"
+                            >
+                                Ydelser
+                            </Button>
+                        </li>
+                        <li>
+                            <Button
+                                className="w-full text-gray-300 bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                                href="#"
+                            >
+                                Om Os
+                            </Button>
+                        </li>
+                        <li>
+                            <Button
+                                className="w-full text-gray-300 bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                                href="#"
+                            >
+                                Bestil Tid Online
+                            </Button>
+                        </li>
+                    </ul>
+                </div>
 
-				{/* Column 3: Contact */}
-				<div>
-					<h4 className="font-semibold text-lg text-white mb-4">Contact Us</h4>
-					<ul className="space-y-2">
-						<li>123 Wellness Ave, Healthville</li>
-						<li>(123) 555-0123</li>
-						<li>contact@balanceandmotion.com</li>
-					</ul>
-				</div>
+                {/* Column 3: Kontakt */}
+                <div>
+                    <h4 className="font-semibold text-lg text-white mb-4">Kontakt Os</h4>
+                    <ul className="space-y-2">
+                        <li>Sundhedsvej 123, 8000 Aarhus C</li>
+                        <li>+45 12 34 56 78</li>
+                        <li>kontakt@balanceandmotion.com</li>
+                    </ul>
+                </div>
 
-				{/* Column 4: Hours */}
-				<div>
-					<h4 className="font-semibold text-lg text-white mb-4">
-						Clinic Hours
-					</h4>
-					<ul className="space-y-2">
-						<li>Mon - Fri: 8am - 7pm</li>
-						<li>Saturday: 9am - 1pm</li>
-						<li>Sunday: Closed</li>
-					</ul>
-				</div>
-			</div>
-			<div className="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
-				<p>
-					&copy; {new Date().getFullYear()} Balance & Motion Physiotherapy. All
-					Rights Reserved.
-				</p>
-			</div>
-		</div>
-	</footer>
+                {/* Column 4: Hours */}
+                <div>
+                    <h4 className="font-semibold text-lg text-white mb-4">
+                        Åbningstider
+                    </h4>
+                    <ul className="space-y-2">
+                        <li>Man - Fre: 08:00 - 19:00</li>
+                        <li>Lørdag: 09:00 - 13:00</li>
+                        <li>Søndag: Lukket</li>
+                    </ul>
+                </div>
+            </div>
+            <div className="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+                <p>
+                    &copy; {new Date().getFullYear()} Balance & Motion Fysioterapi. Alle
+                    rettigheder forbeholdes.
+                </p>
+            </div>
+        </div>
+    </footer>
 );
