@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   // Navigation links, explicitly typed as an array of strings
-  const navLinks: string[] = ['Services', 'About Us', 'Our Team', 'Contact'];
+  const navLinks: string[] = ['Ydelser', 'Om Os', 'Vores Team', 'Kontakt'];
 
   return (
     <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
           <a href="#" className="text-gray-600 hover:text-teal-600">
             <FontAwesomeIcon icon={faCalendarAlt} className="w-6 h-6" />
           </a>
-          <Button>Book Online</Button>
+          <Button>Bestil Tid Online</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
                 {link}
               </a>
             ))}
-            <Button className="w-full mt-4">Book Online</Button>
+            <Button className="w-full mt-4">Bestil Tid Online</Button>
           </nav>
         </div>
       )}

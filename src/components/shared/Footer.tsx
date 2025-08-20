@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button } from '../Interacting/Button';
+import { NavButton } from '../Interacting/NavButton';
 
 
 export const Footer: React.FC = () => (
@@ -20,36 +20,32 @@ export const Footer: React.FC = () => (
                     <h4 className="font-semibold text-lg text-white mb-4">Navigation</h4>
                     <ul className="space-y-2">
                         <li>
-                            <Button
-                                className="w-full bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                            <NavButton
                                 href="#"
                             >
                                 Forside
-                            </Button>
+                            </NavButton>
                         </li>
                         <li>
-                            <Button
-                                className="w-full text-gray-300 bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                            <NavButton
                                 href="#"
                             >
                                 Ydelser
-                            </Button>
+                            </NavButton>
                         </li>
                         <li>
-                            <Button
-                                className="w-full text-gray-300 bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                            <NavButton
                                 href="#"
                             >
                                 Om Os
-                            </Button>
+                            </NavButton>
                         </li>
                         <li>
-                            <Button
-                                className="w-full text-gray-300 bg-transparent hover:bg-gray-800 transition-colors duration-300 py-0 px-0 font-normal shadow-none rounded-none text-base"
+                            <NavButton
                                 href="#"
                             >
                                 Bestil Tid Online
-                            </Button>
+                            </NavButton>
                         </li>
                     </ul>
                 </div>
