@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DinFisFys from '../../assets/Geekens/DinFisFys.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,9 +16,12 @@ export const Header: React.FC = () => {
   return (
     <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-gray-800">
-          Balance & Motion
-        </a>
+        <div className="flex items-center space-x-3">
+          <img src={DinFisFys} alt="Logo" className="h-10 w-10 object-cover rounded-full" />
+          <a href="#" className="text-2xl font-bold text-gray-800">
+            Gerkens FysGaard
+          </a>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -56,7 +60,6 @@ export const Header: React.FC = () => {
               <a
                 key={link}
                 href="#"
-                className="text-gray-600 hover:text-teal-600 w-full text-center py-3 rounded-md hover:bg-gray-100 transition-colors"
               >
                 {link}
               </a>
