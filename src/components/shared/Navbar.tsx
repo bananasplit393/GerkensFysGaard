@@ -7,13 +7,12 @@ import {
 	faTimes, // Added for the mobile menu close icon
 } from '@fortawesome/free-solid-svg-icons';
 
-// --- Type Definitions for our data ---
+
 interface NavLink {
 	name: string;
 	dropdown?: string[];
 }
 
-// --- Component Data ---
 const navLinks: NavLink[] = [
 	{ name: 'FORSIDE' },
 	{ name: 'OM', dropdown: [] },
@@ -29,12 +28,26 @@ const navLinks: NavLink[] = [
 			'RenKost',
 		],
 	},
-	{ name: 'SYMPTOMER', dropdown: [] },
+	{ name: 'SYMPTOMER', dropdown: [
+		'Rygsmerter',
+		'Nakkesmerter',
+		'Hovedpine',
+		'Kæbesmerter',
+		'Stress',
+		'Angst',
+		'Depression',
+		'Fysiske symptomer',
+		'Psykiske symptomer',
+	] },
 	{ name: 'BOOK TID' },
-	{ name: 'PRISER' },
+	{ name: 'Certifikater' },
 	{ name: 'EVENTS' },
-	{ name: 'OPSKRIFTER' },
-	{ name: 'BLOG' },
+	{ name: '#SOME' , dropdown: [
+		'facebook', 
+		'instagram',
+		'Alexander',
+		'Louise'
+	] },
 ];
 
 export const Navbar: React.FC = () => {
@@ -65,38 +78,44 @@ export const Navbar: React.FC = () => {
 								className="relative group"
 							>
 								{link.dropdown ? (
-									<div>
-										<button
-											onClick={() => handleDropdownToggle(link.name)}
-											className="flex items-center space-x-1 hover:text-white focus:outline-none transition-colors"
-										>
-											<span className="text-sm font-semibold uppercase tracking-wider">
-												{link.name}
-											</span>
-											<FontAwesomeIcon
-												icon={faChevronDown}
-												className="w-3 h-3 transition-transform group-hover:rotate-180"
-											/>
-										</button>
-										{openDropdown === link.name && (
-											<ul className="absolute mt-2 w-72 bg-white text-black rounded-md shadow-lg py-2">
-												{link.dropdown.map((item) => (
-													<li key={item}>
-														<a
-															href="#"
-															className="flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-100"
-														>
-															<FontAwesomeIcon
-																icon={faBars}
-																className="w-4 h-4 text-gray-500"
-															/>
-															<span>{item}</span>
-														</a>
-													</li>
-												))}
-											</ul>
-										)}
-									</div>
+									// This is the parent `div` that will now handle the hover events.
+								<div
+									onMouseEnter={() => setOpenDropdown(link.name)}
+									onMouseLeave={() => setOpenDropdown(null)}
+								>
+									<button
+										// Note: The onMouseEnter and onMouseLeave props are removed from the button.
+										className="flex items-center space-x-1 hover:text-white focus:outline-none transition-colors"
+									>
+										<span className="text-sm font-semibold uppercase tracking-wider">
+											{link.name}
+										</span>
+										<FontAwesomeIcon
+											icon={faChevronDown}
+											className="w-3 h-3 transition-transform group-hover:rotate-180"
+										/>
+									</button>
+									{openDropdown === link.name && (
+										<ul className="absolute mt-0.25 w-72 bg-white text-black rounded-md shadow-lg py-2
+											border border-gray-200 z-10
+											transition-all duration-3000 ease-in-out">
+											{link.dropdown.map((item) => (
+												<li key={item}>
+													<a
+														href="#"
+														className="flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-100"
+													>
+														<FontAwesomeIcon
+															icon={faBars}
+															className="w-4 h-4 text-gray-500"
+														/>
+														<span>{item}</span>
+													</a>
+												</li>
+											))}
+										</ul>
+									)}
+								</div>
 								) : (
 									<a
 										href="#"

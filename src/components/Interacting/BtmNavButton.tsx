@@ -1,11 +1,11 @@
 import React from 'react';
 
 // It extends the standard HTML anchor element attributes.
-interface NavButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface BtmNavButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
 }
 
-export const NavButton: React.FC<NavButtonProps> = ({
+export const BtmNavButton: React.FC<BtmNavButtonProps> = ({
   children,
   className,
   ...props

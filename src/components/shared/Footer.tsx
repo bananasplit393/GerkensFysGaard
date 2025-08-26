@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NavButton } from '../Interacting/NavButton';
+import { BtmNavButton } from '../Interacting/BtmNavButton';
 
 
 export const Footer: React.FC = () => (
@@ -20,32 +20,32 @@ export const Footer: React.FC = () => (
                     <h4 className="font-semibold text-lg text-white mb-4">Navigation</h4>
                     <ul className="space-y-2">
                         <li>
-                            <NavButton
+                            <BtmNavButton
                                 href="#"
                             >
                                 Forside
-                            </NavButton>
+                            </BtmNavButton>
                         </li>
                         <li>
-                            <NavButton
+                            <BtmNavButton
                                 href="#"
                             >
                                 Ydelser
-                            </NavButton>
+                            </BtmNavButton>
                         </li>
                         <li>
-                            <NavButton
+                            <BtmNavButton
                                 href="#"
                             >
                                 Om Os
-                            </NavButton>
+                            </BtmNavButton>
                         </li>
                         <li>
-                            <NavButton
+                            <BtmNavButton
                                 href="#"
                             >
                                 Bestil Tid Online
-                            </NavButton>
+                            </BtmNavButton>
                         </li>
                     </ul>
                 </div>
