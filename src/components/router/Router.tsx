@@ -3,7 +3,7 @@ import { BrowserRouter, Outlet, RouteObject, useRoutes } from 'react-router-dom'
 // import { RequireAuth } from '~/components/auth/AuthProvider';
 
 import Loading from '~/components/ui/Loading';
-import { HomePage } from '../pages/HomePage';
+import { Homepage } from '../pages/Homepage';
 const LoginScreen = lazy(() => import('~/components/pages/Login'));
 const NotFoundScreen = lazy(() => import('~/components/pages/NotFound'));
 
@@ -23,7 +23,7 @@ function Routes() {
       children: [
         {
           index: true,
-          element: <HomePage />,
+          element: <Homepage />,
         },
         // {
         //   path: '/protected',

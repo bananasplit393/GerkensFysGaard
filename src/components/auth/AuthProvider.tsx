@@ -2,7 +2,7 @@
 import { createContext, useState, useContext, ReactNode } from 'react';
 import { useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { fakeAuthProvider } from '~/components/auth/provider';
-import NavItem from '~/components/layout/Nav/NavItem';
+import NavItem from '~/components/layout/Navbar/NavItem';
 
 interface AuthContextType {
   user: any;
