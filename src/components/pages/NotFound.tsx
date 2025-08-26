@@ -1,4 +1,4 @@
-import Head from '~/components/shared/Head';
+import Head from '~/components/layout/Head';
 
 export default function NotFoundScreen() {
   return (

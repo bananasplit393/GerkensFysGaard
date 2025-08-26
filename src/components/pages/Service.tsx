@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Assuming your Button component is also using Tailwind CSS
-import { Button } from '../Interacting/Button';
+import { Button } from '../ui/Button';
 
 // --- TYPE DEFINITIONS ---
 // It's good practice to define the shape of your data

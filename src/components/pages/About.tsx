@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Assuming your Button component is located here
-import { Button } from '../Interacting/Button';
+import { Button } from '../ui/Button';
 
 export const About: React.FC = () => (
   <section className="py-16 sm:py-20 bg-slate-50">

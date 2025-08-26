@@ -1,6 +1,6 @@
 import { HomePage } from './pages/HomePage';
-import { Header } from './shared/Header';
-import { Footer } from './shared/Footer';
+import { Header } from './layout/Header';
+import { Footer } from './layout/Footer';
 
 const App: React.FC = () => {
   return (

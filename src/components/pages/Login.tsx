@@ -1,7 +1,7 @@
 import { FormEvent } from 'react';
 import { Location, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '~/components/auth/AuthProvider';
-import Head from '~/components/shared/Head';
+import Head from '~/components/layout/Head';
 
 export default function Login() {
   const navigate = useNavigate();

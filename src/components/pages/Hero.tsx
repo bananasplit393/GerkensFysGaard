@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Assuming your Button component is also using Tailwind CSS now
-import { Button } from '../Interacting/Button';
+import { Button } from '../ui/Button';
 
 export const Hero: React.FC = () => {
   // For background images with Tailwind, it's common to set them in your CSS

@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Outlet, RouteObject, useRoutes } from 'react-router-dom';
 // import { RequireAuth } from '~/components/auth/AuthProvider';
 
-import Loading from '~/components/shared/Loading';
+import Loading from '~/components/ui/Loading';
 import { HomePage } from '../pages/HomePage';
 const LoginScreen = lazy(() => import('~/components/pages/Login'));
 const NotFoundScreen = lazy(() => import('~/components/pages/NotFound'));

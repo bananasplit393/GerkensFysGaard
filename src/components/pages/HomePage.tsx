@@ -1,4 +1,4 @@
-import { Navbar } from '../shared/Navbar';
+import { Navbar } from '../layout/Navbar/Navbar';
 import { Hero } from './Hero';
 
 export const HomePage = () => {
