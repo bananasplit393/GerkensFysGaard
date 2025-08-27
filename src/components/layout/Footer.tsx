@@ -1,5 +1,5 @@
 import React from 'react';
-import { BtmNavButton } from '../ui/BtmNavButton';
+import { BtmNavButton } from './ui/BtmNavButton';
 
 
 export const Footer: React.FC = () => (

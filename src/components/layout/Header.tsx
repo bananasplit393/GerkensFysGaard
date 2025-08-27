@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 // Assuming your Button component is also typed and using Tailwind classes
-import { Button } from '../ui/Button';
+import { Button } from './ui/Button';
 
 export const Header: React.FC = () => {
   // State for the mobile menu, explicitly typed as a boolean
