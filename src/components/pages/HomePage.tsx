@@ -30,7 +30,9 @@ export const Homepage: React.FC = () => {
           Personalized physiotherapy to help you achieve your health and wellness goals.
         </p>
         {/* The Button component now contains its own base styles */}
-        <Button>Book an Appointment</Button>
+        <Button href="https://ezme.io/c/xEF/zGvg">
+          Bestil Tid Online
+        </Button>
       </div>
     </section>
   );
