@@ -1,15 +1,17 @@
 import React from 'react';
 
-// Assuming your Button component is located here
-import { Button } from '../ui/Button';
+const PATH_TO_RYGGEN = "../../../assets/Geekens/StyrPaaRyggen.jpg"; 
 
-export const About: React.FC = () => (
+// Assuming your Button component is located here
+import { Button } from '../../layout/ui/Button';
+
+export const OmOs: React.FC = () => (
   <section className="py-16 sm:py-20 bg-slate-50">
     <div className="container mx-auto px-4 sm:px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="w-full">
           <img
-            src="https://placehold.co/800x600/E0F2F1/0F766E?text=Patient-Centered+Care"
+            src={PATH_TO_RYGGEN}
             alt="Physiotherapist consulting with a patient"
             className="rounded-lg shadow-2xl w-full h-auto"
           />
