@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from './layout/Header';
 import { Footer } from './layout/Footer';
 import { Navbar } from './layout/Navbar';
-import { Homepage } from './pages/Homepage';
+import Router from './router/Router';
 
 const App: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Navbar />
-        <Homepage />
+        <Router />
       </main>
       <Footer />
     </div>

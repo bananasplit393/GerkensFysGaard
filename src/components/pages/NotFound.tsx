@@ -1,9 +1,11 @@
-import Head from '~/components/shared/Head';
+
+import { Button } from '../ui/Button';
 
 export default function NotFoundScreen() {
   return (
     <>
-      <Head title="Page not found" />
+      {/* If you have a Head component for setting the page title, use it here */}
+      {/* <Head title="Page not found" /> */}
       <div className="hero flex-grow">
         <div className="hero-content text-center">
           <div className="max-w-md">
@@ -12,9 +14,9 @@ export default function NotFoundScreen() {
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In
               deleniti eaque aut repudiandae et a id nisi.
             </p>
-            <a className="btn btn-primary" href="/">
-              Go to homepage
-            </a>
+            <Button href="/" className="bg-green-600 hover:bg-green-700">
+              Se Forside
+            </Button>
           </div>
         </div>
       </div>

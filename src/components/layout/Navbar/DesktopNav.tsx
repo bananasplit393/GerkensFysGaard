@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronDown, faSearch } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from './constants';
+import { NavLink, DropdownItem } from './constants';
 
 interface DesktopNavProps {
   navLinks: NavLink[];
@@ -34,17 +34,17 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ navLinks, openDropdown, 
                 {openDropdown === link.name && (
                   <ul className="absolute z-[100] mt-0.25 w-72 bg-white text-black rounded-md shadow-lg 
                             py-2 border border-gray-200 transition-all duration-3000 ease-in-out">
-                    {link.dropdown.map((item) => (
-                      <li key={item}>
+                    {link.dropdown.map((item: DropdownItem) => (
+                      <li key={item.label}>
                         <a
-                          href="#"
+                          href={item.href ? item.href : "#"}
                           className="flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-100"
                         >
                           <FontAwesomeIcon
                             icon={faBars}
                             className="w-4 h-4 text-gray-500"
                           />
-                          <span>{item}</span>
+                          <span>{item.label}</span>
                         </a>
                       </li>
                     ))}

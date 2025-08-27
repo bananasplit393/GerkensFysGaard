@@ -3,7 +3,10 @@ import { BrowserRouter, Outlet, RouteObject, useRoutes } from 'react-router-dom'
 // import { RequireAuth } from '~/components/auth/AuthProvider';
 
 import Loading from '~/components/ui/Loading';
-import { Homepage } from '../pages/Homepage';
+// Update the import path to the correct location of Homepage
+import { Homepage } from '~/components/pages/HomePage';
+import Alexander from '../pages/Alexander';
+import Louise from '../pages/Louise';
 const LoginScreen = lazy(() => import('~/components/pages/Login'));
 const NotFoundScreen = lazy(() => import('~/components/pages/NotFound'));
 
@@ -36,6 +39,14 @@ function Routes() {
         {
           path: '/login',
           element: <LoginScreen />,
+        },
+        {
+          path: '/alexander',
+          element: <Alexander />,
+        },
+        {
+          path: '/louise',
+          element: <Louise />,
         },
         {
           path: '*',
