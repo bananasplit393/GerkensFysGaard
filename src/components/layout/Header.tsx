@@ -34,11 +34,13 @@ export const Header: React.FC = () => {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="#" className="text-gray-600 hover:text-teal-600">
+          <a href="https://ezme.io/c/xEF/zGvg" className="text-gray-600 hover:text-teal-600">
             <FontAwesomeIcon icon={faCalendarAlt} className="w-6 h-6" />
           </a>
-          <Button>Bestil Tid Online</Button>
-        </div>
+            <Button href="https://ezme.io/c/xEF/zGvg">
+              Bestil Tid Online
+            </Button>
+        </div>  
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
