@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { BtmNavButton } from '../ui/BtmNavButton';
+import { BtmNavButton } from './ui/BtmNavButton';
 
 
 export const Footer: React.FC = () => (
@@ -20,28 +21,21 @@ export const Footer: React.FC = () => (
                     <ul className="space-y-2">
                         <li>
                             <BtmNavButton
-                                href="#"
+                                href="/"
                             >
                                 Forside
                             </BtmNavButton>
                         </li>
                         <li>
                             <BtmNavButton
-                                href="#"
-                            >
-                                Ydelser
-                            </BtmNavButton>
-                        </li>
-                        <li>
-                            <BtmNavButton
-                                href="#"
+                                href="/om-os"
                             >
                                 Om Os
                             </BtmNavButton>
                         </li>
                         <li>
                             <BtmNavButton
-                                href="#"
+                                href="/book-tid"
                             >
                                 Bestil Tid Online
                             </BtmNavButton>
@@ -53,9 +47,28 @@ export const Footer: React.FC = () => (
                 <div>
                     <h4 className="font-semibold text-lg text-white mb-4">Kontakt Os</h4>
                     <ul className="space-y-2">
-                        <li>Sundhedsvej 123, 8000 Aarhus C</li>
-                        <li>+45 12 34 56 78</li>
-                        <li>kontakt@balanceandmotion.com</li>
+                        <li>+45 30 25 68 02</li>
+                        <li>kontakt@holistisksundhedshus.dk</li>
+                        <li>
+                            <a
+                                href="https://datacvr.virk.dk/data/visenhed?enhedstype=virksomhed&id=26437474"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-teal-400 transition-colors"
+                            >
+                                CVR-nr. 26437474
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.google.com/maps/place/P.+S.+Kr%C3%B8yers+Vej+33,+8270+H%C3%B8jbjerg/@56.1226049,10.1966173,17z/data=!3m1!4b1!4m6!3m5!1s0x464c4068c3c54623:0x5574e93a143ce38d!8m2!3d56.1226019!4d10.1991922!16s%2Fg%2F11pv3gflqy?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-teal-400 transition-colors"
+                            >
+                                P.S Krøyers vej 33, 8270 Højbjerg
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
