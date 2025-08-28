@@ -1,13 +1,13 @@
-import React from 'react';
 
-// Assuming your Button component is also using Tailwind CSS now
-import { Button } from '../ui/Button';
+import React from 'react';
+import { Button } from '../layout/ui/Button';
+import logoBg from '../../assets/img/Logo.jpg';
 
 export const Homepage: React.FC = () => {
   // For background images with Tailwind, it's common to set them in your CSS
   // or configure them in tailwind.config.js. For simplicity here, we use an inline style.
   const heroStyle = {
-    backgroundImage: `url('https://placehold.co/1920x1080/F0F9F9/334155?text=Serene+Clinic')`,
+    backgroundImage: `url(${logoBg})`,
   };
 
   return (

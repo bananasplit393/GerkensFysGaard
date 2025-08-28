@@ -1,6 +1,3 @@
-// Fil: FysiskeSymptomerPage.tsx
-import React from 'react';
-
 const FysiskeSymptomerPage = () => {
   return (
     <div className="p-6 md:p-8 bg-white rounded-lg shadow-md max-w-4xl mx-auto">

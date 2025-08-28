@@ -19,11 +19,6 @@ Fys Første Konsultation
 	600 - 800 kr 
 
 
- 
-	
-
-
-
 ## Frontend 
 
 
@@ -103,6 +98,9 @@ export interface Customer {
 
 ## Holistisk sundheds hus 
 ### Issues 
-Søgning 
-Nyhedsbrev 
-ArosKST.dk
+forside > Søgning 
+forside > Nyhedsbrev
+
+links > ArosKST.dk
+
+footer > Find os 

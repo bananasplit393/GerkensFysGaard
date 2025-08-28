@@ -3,6 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronDown, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { NavLink, DropdownItem } from './constants';
 
+import { BtmNavButton } from '../ui/BtmNavButton';
+
+
 interface DesktopNavProps {
   navLinks: NavLink[];
   openDropdown: string | null;
@@ -52,17 +55,21 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ navLinks, openDropdown, 
                 )}
               </div>
             ) : (
-              <a
-                href="#"
-                className="text-sm font-semibold uppercase tracking-wider hover:text-white transition-colors"
+              <BtmNavButton
+                href={link.href}
+                className="text-white text-sm font-semibold tracking-wider uppercase"
               >
                 {link.name}
-              </a>
+              </BtmNavButton>
             )}
           </li>
         ))}
         <li>
-          <a href="#" className="hover:text-white transition-colors">
+          {/* Search bar */}
+          <a 
+            href="#"
+            className="hover:text-white transition-colors"
+          >
             <FontAwesomeIcon icon={faSearch} />
           </a>
         </li>

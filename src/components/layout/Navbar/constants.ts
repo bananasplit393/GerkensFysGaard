@@ -1,4 +1,3 @@
-
 export interface DropdownItem {
   label: string;
   href?: string;
@@ -6,39 +5,40 @@ export interface DropdownItem {
 
 export interface NavLink {
   name: string;
+  href?: string;
   dropdown?: DropdownItem[];
 }
 
 export const navLinks: NavLink[] = [
-  { name: 'FORSIDE' },
+  { name: 'FORSIDE', href: '/' },
   { name: 'OM', dropdown: [
-    { label: 'Om os' },
-    { label: 'Louise', href: '/louise' },
+    { label: 'Om os', href: '/om-os' },
+    { label: 'Louise', href: 'https://holistisksundhedshus.dk/' },
     { label: 'Alexander', href: '/alexander' },
   ] },
   {
     name: 'KONSULTATIONER OG BEHANDLINGER',
     dropdown: [
-      { label: 'Telefonkonsultation' },
-      { label: 'Akupunktur' },
-      { label: 'Biodynamisk Kranio Sakral terapi' },
-      { label: 'Diabetes og livsstilsforløb' },
-      { label: 'Fysiurgisk massage' },
-      { label: 'Bindevævs massage' },
-      { label: 'RenKost' },
+      { label: 'Akupunktur', href: '/akupunktur' },
+      { label: 'Bindevævs massage', href: '/bindevavs-massage' },
+      { label: 'Biodynamisk Kranio Sakral terapi', href: '/biodynamisk-kranio-sakral-terapi' },
+      { label: 'Diabetes og livsstilsforløb', href: '/diabetes-og-livsstilsforlob' },
+      { label: 'Fysiurgisk massage', href: '/fysiurgisk-massage' },
+      { label: 'RenKost', href: '/ren-kost' },
+      { label: 'Telefonkonsultation', href: '/telefonkonsultation' },
     ],
   },
   { name: 'SYMPTOMER', dropdown: [
-    { label: 'Rygsmerter' },
-    { label: 'Nakkesmerter' },
-    { label: 'Hovedpine' },
-    { label: 'Kæbesmerter' },
-    { label: 'Stress' },
-    { label: 'Angst' },
-    { label: 'Depression' },
-    { label: 'Fysiske symptomer' },
-    { label: 'Psykiske symptomer' },
+    { label: 'Angst', href: '/angst'},
+    { label: 'Depression', href: '/depression' },
+    { label: 'Fysiske symptomer', href: '/fysiske-symptomer' },
+    { label: 'Hovedpine', href: '/hovedpine' },
+    { label: 'Kæbesmerter', href: '/kaebesmerter' },
+    { label: 'Nakkesmerter', href: '/nakkesmerter' },
+    { label: 'Psykiske symptomer', href: '/psykiske-symptomer' },
+    { label: 'Rygsmerter', href: '/rygsmerter' },
+    { label: 'Stress', href: '/stress' },
   ] },
-  { name: 'BOOK TID' },
-  { name: 'Certifikater' },
+  { name: 'BOOK TID', href: '/book-tid' },
+  { name: 'Certifikater', href: '/certifikater' },
 ];

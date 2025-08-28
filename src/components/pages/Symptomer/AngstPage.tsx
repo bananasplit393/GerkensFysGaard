@@ -1,6 +1,3 @@
-// Fil: AngstPage.tsx
-import React from 'react';
-
 const AngstPage = () => {
   return (
     <div className="p-6 md:p-8 bg-white rounded-lg shadow-md max-w-4xl mx-auto">
@@ -23,10 +20,10 @@ const AngstPage = () => {
         </p>
         <ul className="list-disc list-inside pl-4 space-y-2">
           <li>
-            <strong>Grounding og Kropsbevidsthed:</strong> Vi guider dig gennem øvelser, der hjælper dig med at &quote;lande&quote; i din krop og flytte fokus fra bekymrende tanker til fysiske fornemmelser.
+            <strong>Grounding og Kropsbevidsthed:</strong> Vi guider dig gennem øvelser, der hjælper dig med at <span className="italic">lande</span> i din krop og flytte fokus fra bekymrende tanker til fysiske fornemmelser.
           </li>
           <li>
-            <strong>Regulering af Nervesystemet:</strong> Gennem beroligende berøring, blide stræk og specifikke vejrtrækningsøvelser kan vi hjælpe med at dæmpe kroppens ${alarmberedskab}.
+            <strong>Regulering af Nervesystemet:</strong> Gennem beroligende berøring, blide stræk og specifikke vejrtrækningsøvelser kan vi hjælpe med at dæmpe kroppens <span className="italic">alarmberedskab</span>.
           </li>
           <li>
             <strong>Afspænding:</strong> Vi arbejder med at frigøre de kroniske muskelspændinger, som angsten ofte medfører, især i brystkasse, nakke og skuldre.
