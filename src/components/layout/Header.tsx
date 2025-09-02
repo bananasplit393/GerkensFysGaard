@@ -14,11 +14,7 @@ export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   // Navigation links, explicitly typed as an array of strings
-  const navLinks: { name: string; href: string }[] = [
-    { name: 'Ydelser', href: '/' },
-    { name: 'Om Os', href: '/om-os' },
-    { name: 'Kontakt', href: '/kontakt' },
-  ];
+  const navLinks: { name: string; href: string }[] = [ ];
 
   return (
   <header className="bg-white/40 backdrop-blur-md sticky top-0 z-50 shadow-sm">
