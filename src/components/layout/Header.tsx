@@ -1,10 +1,9 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
 import DinFisFys from '../../assets/Geekens/DinFisFys.png';
 import Logo from '../../assets/img/Logo.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { Button } from './ui/Button';
 import { BtmNavButton } from './ui/BtmNavButton';
 // Ensure BtmNavButtonProps includes 'to' as a string prop in its definition
@@ -64,13 +63,9 @@ export const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800 focus:outline-none">
-            {isMenuOpen ? (
-              <FontAwesomeIcon icon={faTimes} className="w-6 h-6" />
-            ) : (
-              <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
-            )}
-          </button>
+          <Button href="https://ezme.io/c/xEF/zGvg" className="w-full mt-4" onClick={() => setIsMenuOpen(false)}>
+              Book Nu
+          </Button>
         </div>
       </div>
 
@@ -78,17 +73,7 @@ export const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="flex flex-col items-center space-y-4 px-6 pt-4 pb-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={() => setIsMenuOpen(false)} // Close menu on click
-                className="text-lg text-gray-700 hover:text-teal-600 w-full text-center py-2"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button href="https://ezme.io/c/xEF/zGvg" className="w-full mt-4">
+            <Button href="https://ezme.io/c/xEF/zGvg" className="w-full mt-4" onClick={() => setIsMenuOpen(false)}>
               Bestil Tid Online
             </Button>
           </nav>
