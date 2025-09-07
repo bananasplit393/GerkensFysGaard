@@ -29,12 +29,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({ navLinks, openDropdown, ha
               {openDropdown === link.name && (
                 <ul className="pl-4 mt-1">
                   {link.dropdown.map((item) => (
-                    <li key={item}>
+                    <li key={item.label || item.href}>
                       <a
-                        href="#"
+                        href={item.href || "#"}
                         className="block py-2 px-3 rounded-md hover:bg-gray-700"
                       >
-                        {item}
+                        {item.label}
                       </a>
                     </li>
                   ))}
